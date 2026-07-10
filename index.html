@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Grace Villarino | AI Solutions Specialist</title>
+
+<meta name="description" content="AI Solutions Specialist helping businesses leverage AI, automation and digital systems to work smarter.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js"></script>
+
+<style>
+
+:root{
+--yellow:#F4BE00;
+--pink:#FF5B9A;
+--purple:#3F007D;
+--darkpurple:#24004B;
+--light:#efefef;
+--dark:#2a2a2a;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Inter',sans-serif;
+font-weight:300;
+line-height:1.7;
+color:var(--dark);
+overflow-x:hidden;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:0 40px;
+}
+
+section{
+padding:110px 0;
+}
+
+h1,h2,h3{
+font-family:'Bebas Neue',sans-serif;
+font-weight:400;
+letter-spacing:1px;
+line-height:1;
+}
+
+h1{
+font-size:7rem;
+}
+
+h2{
+font-size:4.5rem;
+margin-bottom:30px;
+}
+
+p{
+margin-bottom:20px;
+}
+
+.btn{
+display:inline-block;
+padding:16px 34px;
+background:#000;
+color:#fff;
+text-decoration:none;
+font-weight:600;
+font-size:.95rem;
+letter-spacing:.5px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+}
+
+nav{
+position:absolute;
+top:35px;
+right:50px;
+z-index:100;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav a{
+text-decoration:none;
+color:#000;
+font-size:.8rem;
+font-weight:600;
+letter-spacing:.5px;
+}
+
+.hero{
+background:var(--yellow);
+min-height:100vh;
+display:flex;
+align-items:center;
+}
+
+.hero-content{
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+gap:60px;
+}
+
+.hero-image{
+display:flex;
+justify-content:center;
+}
+
+.hero-image img{
+width:100%;
+max-width:420px;
+aspect-ratio:1/1;
+object-fit:cover;
+border-radius:50%;
+filter:grayscale(100%);
+border:8px solid rgba(255,255,255,.15);
+}
+
+.hero p{
+max-width:450px;
+font-size:1.1rem;
+margin-top:25px;
+}
+
+.about{
+background:var(--light);
+}
+
+.two-col{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:80px;
+align-items:center;
+}
+
+.services{
+background:var(--pink);
+}
+
+.projects{
+background:var(--light);
+text-align:center;
+}
+
+.project-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.project-card{
+background:#fff;
+padding:35px;
+text-align:left;
+}
+
+.project-card h3{
+font-size:2rem;
+margin-bottom:10px;
+}
+
+.giving-back{
+background:#fff;
+}
+
+.process{
+background:var(--purple);
+color:#fff;
+}
+
+.process h2{
+color:#fff;
+}
+
+.steps{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+margin-top:50px;
+}
+
+.step{
+background:rgba(255,255,255,.08);
+padding:30px;
+}
+
+.step h3{
+font-size:2rem;
+margin-bottom:10px;
+}
+
+.contact{
+background:var(--darkpurple);
+color:#fff;
+}
+
+.contact h2{
+color:#fff;
+}
+
+.footer{
+background:#180030;
+color:#fff;
+padding:30px;
+text-align:center;
+font-size:.9rem;
+}
+
+@media(max-width:960px){
+
+.hero-content,
+.two-col{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.hero-image{
+order:-1;
+}
+
+.hero p{
+margin-left:auto;
+margin-right:auto;
+}
+
+.steps{
+grid-template-columns:1fr 1fr;
+}
+
+h1{
+font-size:5rem;
+}
+
+h2{
+font-size:3.5rem;
+}
+}
+
+@media(max-width:640px){
+
+.container{
+padding:0 25px;
+}
+
+section{
+padding:80px 0;
+}
+
+.steps{
+grid-template-columns:1fr;
+}
+
+h1{
+font-size:4rem;
+}
+
+h2{
+font-size:2.8rem;
+}
+
+nav{
+display:none;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<ul>
+<li><a href="#about">ABOUT</a></li>
+<li><a href="#services">SERVICES</a></li>
+<li><a href="#process">PROCESS</a></li>
+<li><a href="#giving">COMMUNITY</a></li>
+<li><a href="#contact">BOOK NOW</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="hero-image">
+<img src="images/grace-villarino.jpg" alt="Grace Villarino">
+</div>
+
+<div>
+
+<h1>
+AI SOLUTIONS<br>
+FOR GROWING<br>
+BUSINESSES
+</h1>
+
+<p>
+Websites • Automation • Digital Systems
+
+Helping businesses work smarter through practical AI implementation, automation, and modern digital solutions.
+</p>
+
+<br>
+
+<a
+class="btn"
+href=""
+onclick="Calendly.initPopupWidget({url:'https://calendly.com/gracevillarino/30min'});return false;">
+SCHEDULE A CALL
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="about" id="about">
+
+<div class="container">
+
+<div class="two-col">
+
+<div>
+<h2>
+HELLO.<br>
+WONDERFUL TO<br>
+MEET YOU.
+</h2>
+</div>
+
+<div>
+
+<p>
+I'm Grace Villarino, an AI Solutions Specialist with over 15 years of experience building websites and digital systems for businesses around the world.
+</p>
+
+<p>
+Today I help organizations identify practical ways to use AI, automation, and modern web technologies to streamline operations, improve efficiency, and create better customer experiences.
+</p>
+
+<p>
+My focus isn't on AI hype. It's on delivering solutions that solve real business problems and create measurable results.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="services" id="services">
+
+<div class="container">
+
+<div class="two-col">
+
+<div>
+
+<p>
+Whether you're exploring AI for the first time or looking to improve existing systems, I can help identify opportunities and implement practical solutions that create measurable business value.
+</p>
+
+</div>
+
+<div>
+
+<h2>
+AI WEBSITE<br>
+SOLUTIONS<br>
+AUTOMATION<br>
+DIGITAL SYSTEMS
+</h2>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="projects">
+
+<div class="container">
+
+<h2>WHAT I HELP WITH</h2>
+
+<div class="project-grid">
+
+<div class="project-card">
+<h3>AI Website Solutions</h3>
+<p>
+AI assistants, lead generation, customer support, knowledge bases and modern website experiences.
+</p>
+</div>
+
+<div class="project-card">
+<h3>Workflow Automation</h3>
+<p>
+Reduce repetitive work through intelligent automation and connected business systems.
+</p>
+</div>
+
+<div class="project-card">
+<h3>Digital Transformation</h3>
+<p>
+Modernize processes, improve efficiency and create scalable systems for growth.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="giving-back" id="giving">
+
+<div class="container">
+
+<div class="two-col">
+
+<div>
+
+<h2>
+SHARING<br>
+KNOWLEDGE /<br>
+COMMUNITY
+</h2>
+
+</div>
+
+<div>
+
+<p>
+Technology has opened many opportunities throughout my career.
+</p>
+
+<p>
+I enjoy helping others learn digital skills, understand emerging technologies, and explore practical ways AI can improve their work and businesses.
+</p>
+
+<p>
+Through mentoring, open-source projects and community involvement, I believe knowledge becomes more valuable when shared.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="process" id="process">
+
+<div class="container">
+
+<h2>HOW WE WORK TOGETHER</h2>
+
+<div class="steps">
+
+<div class="step">
+<h3>DISCOVER</h3>
+<p>
+Identify opportunities, challenges and business goals.
+</p>
+</div>
+
+<div class="step">
+<h3>DESIGN</h3>
+<p>
+Develop a practical AI and automation strategy.
+</p>
+</div>
+
+<div class="step">
+<h3>IMPLEMENT</h3>
+<p>
+Build, integrate and deploy the solution.
+</p>
+</div>
+
+<div class="step">
+<h3>OPTIMIZE</h3>
+<p>
+Measure outcomes and continuously improve.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="two-col">
+
+<div>
+
+<h2>
+LET'S BUILD<br>
+SOMETHING<br>
+SMARTER
+</h2>
+
+</div>
+
+<div>
+
+<p>
+Whether you're curious about AI, want to automate workflows, modernize your website, or improve business processes, I'd love to hear about your project.
+</p>
+
+<p>
+me@gracevillarino.com
+</p>
+
+<a
+class="btn"
+href=""
+onclick="Calendly.initPopupWidget({url:'https://calendly.com/gracevillarino/30min'});return false;">
+SCHEDULE A CALL
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+© 2026 Grace Villarino · AI Solutions Specialist · Websites, Automation & Digital Systems
+</footer>
+
+</body>
+</html>
