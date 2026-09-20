@@ -185,6 +185,124 @@ font-size:2rem;
 margin-bottom:10px;
 }
 
+.portfolio{
+background:var(--light);
+text-align:center;
+overflow:hidden;
+}
+
+.portfolio-label{
+display:inline-block;
+font-size:.8rem;
+font-weight:600;
+letter-spacing:2px;
+padding:8px 20px;
+margin:60px 0 30px;
+}
+
+.portfolio-label:first-of-type{
+margin-top:10px;
+}
+
+.label-wp{
+background:var(--purple);
+color:#fff;
+}
+
+.label-ai{
+background:#000;
+color:var(--yellow);
+}
+
+.portfolio-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:45px 30px;
+padding:20px 10px 10px;
+}
+
+.portfolio-card{
+display:block;
+background:#fff;
+padding:14px 14px 20px;
+text-align:left;
+text-decoration:none;
+color:var(--dark);
+box-shadow:0 12px 25px rgba(0,0,0,.15);
+transform:rotate(var(--r,-2deg));
+transition:transform .35s ease, box-shadow .35s ease;
+position:relative;
+}
+
+.portfolio-card:nth-child(3n+1){--r:-2.5deg;}
+.portfolio-card:nth-child(3n+2){--r:1.8deg;}
+.portfolio-card:nth-child(3n){--r:-1deg;}
+.portfolio-card:nth-child(4n){--r:2.4deg;}
+
+.portfolio-card:hover{
+transform:rotate(0deg) translateY(-10px) scale(1.04);
+box-shadow:0 22px 40px rgba(0,0,0,.25);
+z-index:5;
+}
+
+.portfolio-thumb{
+position:relative;
+overflow:hidden;
+aspect-ratio:4/3;
+background:#ddd;
+}
+
+.portfolio-thumb img{
+width:100%;
+height:100%;
+object-fit:cover;
+object-position:top;
+display:block;
+filter:grayscale(35%);
+transition:filter .35s ease, transform .5s ease;
+}
+
+.portfolio-card:hover .portfolio-thumb img{
+filter:grayscale(0%);
+transform:scale(1.08);
+}
+
+.portfolio-thumb::after{
+content:"VISIT SITE →";
+position:absolute;
+inset:0;
+display:flex;
+align-items:center;
+justify-content:center;
+background:rgba(63,0,125,.85);
+color:#fff;
+font-family:'Bebas Neue',sans-serif;
+font-size:1.3rem;
+letter-spacing:1px;
+opacity:0;
+transition:opacity .3s ease;
+}
+
+.portfolio-card:hover .portfolio-thumb::after{
+opacity:1;
+}
+
+.portfolio-card h5{
+font-family:'Inter',sans-serif;
+font-weight:600;
+font-size:1rem;
+margin-top:14px;
+color:var(--dark);
+}
+
+.portfolio-card span{
+display:block;
+margin-top:2px;
+font-weight:300;
+font-size:.8rem;
+color:#888;
+}
+
 .giving-back{
 background:#fff;
 }
@@ -298,6 +416,7 @@ display:none;
 <ul>
 <li><a href="#about">ABOUT</a></li>
 <li><a href="#services">SERVICES</a></li>
+<li><a href="#portfolio">PORTFOLIO</a></li>
 <li><a href="#process">PROCESS</a></li>
 <li><a href="#giving">COMMUNITY</a></li>
 <li><a href="#contact">BOOK NOW</a></li>
@@ -440,6 +559,124 @@ Reduce repetitive work through intelligent automation and connected business sys
 Modernize processes, improve efficiency and create scalable systems for growth.
 </p>
 </div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="portfolio" id="portfolio">
+
+<div class="container">
+
+<h2>PORTFOLIO</h2>
+
+<span class="portfolio-label label-wp">WORDPRESS WEBSITES</span>
+
+<div class="portfolio-grid">
+
+<a class="portfolio-card" href="https://wearemodus.co/" target="_blank" rel="noopener">
+<div class="portfolio-thumb"><img src="images/portfolio/wearemodus.jpg" alt="We Are Modus website" loading="lazy"></div>
+<h5>We Are Modus</h5>
+<span>wearemodus.co</span>
+</a>
+
+<a class="portfolio-card" href="https://nicholsonsrestaurant.co.uk/" target="_blank" rel="noopener">
+<div class="portfolio-thumb"><img src="images/portfolio/nicholsonsrestaurant.jpg" alt="Nicholsons Restaurant website" loading="lazy"></div>
+<h5>Nicholsons Restaurant</h5>
+<span>nicholsonsrestaurant.co.uk</span>
+</a>
+
+<a class="portfolio-card" href="https://www.burleighesplanade.com/" target="_blank" rel="noopener">
+<div class="portfolio-thumb"><img src="images/portfolio/burleighesplanade.jpg" alt="Burleigh Esplanade website" loading="lazy"></div>
+<h5>Burleigh Esplanade</h5>
+<span>burleighesplanade.com</span>
+</a>
+
+<a class="portfolio-card" href="https://www.emsau.org/" target="_blank" rel="noopener">
+<div class="portfolio-thumb"><img src="images/portfolio/emsau.jpg" alt="EMS Australia website" loading="lazy"></div>
+<h5>EMS Australia</h5>
+<span>emsau.org</span>
+</a>
+
+<a class="portfolio-card" href="https://www.messageinateacup.org/" target="_blank" rel="noopener">
+<div class="portfolio-thumb"><img src="images/portfolio/messageinateacup.jpg" alt="Message In A Teacup website" loading="lazy"></div>
+<h5>Message In A Teacup</h5>
+<span>messageinateacup.org</span>
+</a>
+
+<a class="portfolio-card" href="https://swisslanna.com/" target="_blank" rel="noopener">
+<div class="portfolio-thumb"><img src="images/portfolio/swisslanna.jpg" alt="Swiss Lanna website" loading="lazy"></div>
+<h5>Swiss Lanna</h5>
+<span>swisslanna.com</span>
+</a>
+
+<a class="portfolio-card" href="https://www.allstates.au/" target="_blank" rel="noopener">
+<div class="portfolio-thumb"><img src="images/portfolio/allstates.jpg" alt="All States website" loading="lazy"></div>
+<h5>All States</h5>
+<span>allstates.au</span>
+</a>
+
+<a class="portfolio-card" href="https://expandedphotography.com/" target="_blank" rel="noopener">
+<div class="portfolio-thumb"><img src="images/portfolio/expandedphotography.jpg" alt="Expanded Photography website" loading="lazy"></div>
+<h5>Expanded Photography</h5>
+<span>expandedphotography.com</span>
+</a>
+
+<a class="portfolio-card" href="https://www.comolegalcoaching.com/" target="_blank" rel="noopener">
+<div class="portfolio-thumb"><img src="images/portfolio/comolegalcoaching.jpg" alt="Como Legal Coaching website" loading="lazy"></div>
+<h5>Como Legal Coaching</h5>
+<span>comolegalcoaching.com</span>
+</a>
+
+<a class="portfolio-card" href="https://www.idcphilippines.org/" target="_blank" rel="noopener">
+<div class="portfolio-thumb"><img src="images/portfolio/idcphilippines.jpg" alt="IDC Philippines website" loading="lazy"></div>
+<h5>IDC Philippines</h5>
+<span>idcphilippines.org</span>
+</a>
+
+<a class="portfolio-card" href="https://www.neptunediving.com/" target="_blank" rel="noopener">
+<div class="portfolio-thumb"><img src="images/portfolio/neptunediving.jpg" alt="Neptune Diving website" loading="lazy"></div>
+<h5>Neptune Diving</h5>
+<span>neptunediving.com</span>
+</a>
+
+<a class="portfolio-card" href="https://unotomo.com/" target="_blank" rel="noopener">
+<div class="portfolio-thumb"><img src="images/portfolio/unotomo.jpg" alt="Unotomo website" loading="lazy"></div>
+<h5>Unotomo</h5>
+<span>unotomo.com</span>
+</a>
+
+<a class="portfolio-card" href="https://www.neighbourhoodconnect.org.au/" target="_blank" rel="noopener">
+<div class="portfolio-thumb"><img src="images/portfolio/neighbourhoodconnect.jpg" alt="Neighbourhood Connect website" loading="lazy"></div>
+<h5>Neighbourhood Connect</h5>
+<span>neighbourhoodconnect.org.au</span>
+</a>
+
+</div>
+
+<span class="portfolio-label label-ai">AI-SUPPORTED SITES</span>
+
+<div class="portfolio-grid">
+
+<a class="portfolio-card" href="https://gomoalboal.com/" target="_blank" rel="noopener">
+<div class="portfolio-thumb"><img src="images/portfolio/gomoalboal.jpg" alt="Go Moalboal website" loading="lazy"></div>
+<h5>Go Moalboal</h5>
+<span>gomoalboal.com</span>
+</a>
+
+<a class="portfolio-card" href="https://www.fisheyeproductions.com.au/" target="_blank" rel="noopener">
+<div class="portfolio-thumb"><img src="images/portfolio/fisheyeproductions.jpg" alt="Fisheye Productions website" loading="lazy"></div>
+<h5>Fisheye Productions</h5>
+<span>fisheyeproductions.com.au</span>
+</a>
+
+<a class="portfolio-card" href="https://emoksguesthouse.com/" target="_blank" rel="noopener">
+<div class="portfolio-thumb"><img src="images/portfolio/emoksguesthouse.jpg" alt="Emok's Guesthouse website" loading="lazy"></div>
+<h5>Emok's Guesthouse</h5>
+<span>emoksguesthouse.com</span>
+</a>
 
 </div>
 
