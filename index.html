@@ -40,8 +40,6 @@ line-height:1.7;
 color:var(--black);
 background:var(--white);
 overflow-x:hidden;
-padding-left:190px;
-padding-right:0;
 }
 
 .container{
@@ -145,7 +143,17 @@ color:var(--black);
 /* nav */
 
 header{
-display:none;
+position:fixed;
+top:0;
+left:0;
+right:0;
+z-index:200;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:26px 40px;
+background:rgba(245,245,243,.85);
+backdrop-filter:blur(10px);
 }
 
 .logo{
@@ -157,50 +165,26 @@ text-decoration:none;
 }
 
 nav{
-position:fixed;
-top:50%;
-left:24px;
-z-index:190;
-width:auto;
-height:auto;
-padding:22px 18px;
-transform:translateY(-50%);
-background:rgba(245,245,243,.85);
-backdrop-filter:blur(10px);
-border-radius:16px;
-box-shadow:0 4px 24px rgba(0,0,0,.04);
-}
-
-nav .nav-logo{
-display:block;
-font-family:'Bebas Neue',sans-serif;
-font-size:1.35rem;
-letter-spacing:2px;
-color:var(--black);
-text-decoration:none;
-margin-bottom:14px;
-padding-bottom:12px;
-border-bottom:1px solid rgba(0,0,0,.08);
-white-space:nowrap;
+display:flex;
+align-items:center;
 }
 
 nav ul{
 display:flex;
-flex-direction:column;
 list-style:none;
-gap:4px;
+gap:34px;
 }
 
 nav a{
 display:block;
-padding:7px 8px;
 text-decoration:none;
 color:var(--black);
-font-size:.68rem;
+font-size:.75rem;
 font-weight:600;
-letter-spacing:1.15px;
-transition:color .2s ease, opacity .2s ease;
+letter-spacing:1.5px;
+transition:color .2s ease;
 }
+
 nav a:hover{
 color:var(--gray);
 }
@@ -280,7 +264,7 @@ min-height:100vh;
 display:flex;
 align-items:center;
 background:var(--off);
-padding:100px 0;
+padding-top:140px;
 }
 
 .hero-grid{
@@ -637,29 +621,15 @@ border-top:1px solid #222;
 }
 
 @media(max-width:960px){
-body{padding-left:0;padding-right:0;}
-header{
-position:fixed;
-top:0;
-left:0;
-right:0;
-z-index:200;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:26px 40px;
-background:rgba(245,245,243,.85);
-backdrop-filter:blur(10px);
-}
-nav .nav-logo{display:none;}
-.hero{padding-top:140px;}
+header{padding:22px 25px;}
 .hero-grid,.two-col{grid-template-columns:1fr;}
 .hero-photo{justify-self:center;margin-top:50px;}
 .step-row{grid-template-columns:1fr;gap:10px;}
 .portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
 .nav-toggle{display:flex;z-index:201;}
 nav{
-top:92px;right:20px;left:auto;width:min(280px,calc(100vw - 40px));height:auto;padding:0;transform:translateY(-8px);
+position:fixed;
+top:82px;right:20px;width:min(280px,calc(100vw - 40px));height:auto;padding:0;transform:translateY(-8px);
 background:rgba(255,255,255,.98);border:none;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.14);
 max-height:0;overflow:hidden;visibility:hidden;opacity:0;pointer-events:none;
 transition:max-height .35s ease,opacity .2s ease,transform .2s ease,visibility .35s;
@@ -689,11 +659,7 @@ h2{font-size:2.4rem;}
 <header>
 <a class="logo" href="#top">GRACE VILLARINO</a>
 
-<button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav').classList.toggle('open');document.body.classList.toggle('nav-open')"><span></span></button>
-</header>
-
 <nav>
-<a class="logo nav-logo" href="#top">GRACE VILLARINO</a>
 <ul>
 <li><a href="#about" onclick="document.querySelector('nav').classList.remove('open');document.body.classList.remove('nav-open')">ABOUT</a></li>
 <li><a href="#portfolio" onclick="document.querySelector('nav').classList.remove('open');document.body.classList.remove('nav-open')">PORTFOLIO</a></li>
@@ -703,6 +669,9 @@ h2{font-size:2.4rem;}
 <li><a href="#contact" onclick="document.querySelector('nav').classList.remove('open');document.body.classList.remove('nav-open')">CONTACT</a></li>
 </ul>
 </nav>
+
+<button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav').classList.toggle('open');document.body.classList.toggle('nav-open')"><span></span></button>
+</header>
 
 <section class="hero" id="top">
 
