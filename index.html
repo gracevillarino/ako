@@ -40,6 +40,7 @@ line-height:1.7;
 color:var(--black);
 background:var(--white);
 overflow-x:hidden;
+padding-right:160px;
 }
 
 .container{
@@ -111,6 +112,7 @@ font-weight:600;
 font-size:.85rem;
 letter-spacing:1.5px;
 border:1.5px solid var(--black);
+border-radius:999px;
 transition:.3s;
 }
 
@@ -166,27 +168,39 @@ text-decoration:none;
 
 nav{
 position:fixed;
-top:0;
-right:0;
+top:50%;
+right:18px;
 z-index:190;
-display:flex;
-align-items:center;
-height:82px;
-padding-right:40px;
+width:126px;
+height:auto;
+padding:14px 10px;
+transform:translateY(-50%);
+background:rgba(245,245,243,.94);
+border:1px solid var(--line);
+border-radius:16px;
+backdrop-filter:blur(12px);
 }
 
 nav ul{
 display:flex;
+flex-direction:column;
 list-style:none;
-gap:34px;
+gap:3px;
 }
 
 nav a{
+display:block;
+padding:10px 9px;
+border-radius:8px;
 text-decoration:none;
 color:var(--black);
-font-size:.75rem;
+font-size:.68rem;
 font-weight:600;
-letter-spacing:1.5px;
+letter-spacing:1.15px;
+transition:background .2s ease;
+}
+nav a:hover{
+background:#fff;
 }
 
 .nav-toggle{
@@ -292,10 +306,12 @@ justify-self:end;
 .hero-photo img{
 width:100%;
 max-width:380px;
-aspect-ratio:3/4;
+aspect-ratio:1/1;
 object-fit:cover;
 display:block;
-border:1.5px solid var(--black);
+border:8px solid #f5f5f3;
+border-radius:50%;
+box-shadow:0 0 0 1px var(--line);
 }
 
 .hero-photo-tag{
@@ -456,10 +472,8 @@ color:#fff;
 
 .portfolio-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:2px;
-background:var(--line);
-border:1px solid var(--line);
+grid-template-columns:repeat(3,minmax(0,1fr));
+gap:15px;
 }
 
 .portfolio-card{
@@ -632,84 +646,33 @@ border-top:1px solid #222;
 }
 
 @media(max-width:960px){
-
-.hero-grid,
-.two-col{
-grid-template-columns:1fr;
+body{padding-right:0;}
+.hero-grid,.two-col{grid-template-columns:1fr;}
+.hero-photo{justify-self:center;margin-top:50px;}
+.step-row{grid-template-columns:1fr;gap:10px;}
+.portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+.nav-toggle{display:flex;z-index:201;}
+nav{
+top:92px;right:20px;width:min(280px,calc(100vw - 40px));height:auto;padding:0;transform:translateY(-8px);
+background:rgba(255,255,255,.98);border:1px solid var(--line);border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.14);
+max-height:0;overflow:hidden;visibility:hidden;opacity:0;pointer-events:none;
+transition:max-height .35s ease,opacity .2s ease,transform .2s ease,visibility .35s;
 }
-
-.hero-photo{
-justify-self:center;
-margin-top:50px;
-}
-
-.step-row{
-grid-template-columns:1fr;
-gap:10px;
-}
-
-h1{
-font-size:4.5rem;
-}
+nav.open{max-height:min(440px,calc(100vh - 120px));overflow-y:auto;visibility:visible;opacity:1;pointer-events:auto;transform:translateY(0);}
+nav ul{flex-direction:column;gap:0;padding:12px;}
+nav a{padding:14px 12px;border-bottom:1px solid var(--line);border-radius:8px;color:var(--black);}
+nav li:last-child a{border-bottom:none;}
+nav a:hover{background:var(--off);}
+h1{font-size:4.5rem;}
 }
 
 @media(max-width:640px){
-
-.container{
-padding:0 25px;
-}
-
-section{
-padding:90px 0;
-}
-
-header{
-padding:22px 25px;
-}
-
-.nav-toggle{
-display:flex;
-}
-
-nav{
-position:fixed;
-top:0;
-right:0;
-left:0;
-height:auto;
-padding-right:0;
-display:block;
-background:#000;
-max-height:0;
-overflow:hidden;
-transition:max-height .35s ease;
-z-index:150;
-}
-
-nav.open{
-max-height:500px;
-}
-
-nav ul{
-flex-direction:column;
-gap:0;
-padding:100px 25px 20px;
-}
-
-nav a{
-display:block;
-padding:16px 0;
-border-bottom:1px solid #222;
-color:#fff;
-}
-
-h1{
-font-size:3.4rem;
-}
-
-h2{
-font-size:2.4rem;
-}
+.container{padding:0 25px;}
+section{padding:90px 0;}
+header{padding:22px 25px;}
+.portfolio-grid{grid-template-columns:1fr;}
+h1{font-size:3.4rem;}
+h2{font-size:2.4rem;}
 }
 
 </style>
@@ -872,11 +835,6 @@ My focus isn't on AI hype. It's on delivering solutions that solve real business
 <div class="portfolio-meta"><div><h5>All States</h5><span>allstates.au</span></div><span class="portfolio-arrow">→</span></div>
 </a>
 
-<a class="portfolio-card" href="https://expandedphotography.com/" target="_blank" rel="noopener">
-<div class="portfolio-thumb"><img src="images/portfolio/expandedphotography.jpg" alt="Expanded Photography website" loading="lazy"></div>
-<div class="portfolio-meta"><div><h5>Expanded Photography</h5><span>expandedphotography.com</span></div><span class="portfolio-arrow">→</span></div>
-</a>
-
 <a class="portfolio-card" href="https://www.comolegalcoaching.com/" target="_blank" rel="noopener">
 <div class="portfolio-thumb"><img src="images/portfolio/comolegalcoaching.jpg" alt="Como Legal Coaching website" loading="lazy"></div>
 <div class="portfolio-meta"><div><h5>Como Legal Coaching</h5><span>comolegalcoaching.com</span></div><span class="portfolio-arrow">→</span></div>
@@ -890,11 +848,6 @@ My focus isn't on AI hype. It's on delivering solutions that solve real business
 <a class="portfolio-card" href="https://www.neptunediving.com/" target="_blank" rel="noopener">
 <div class="portfolio-thumb"><img src="images/portfolio/neptunediving.jpg" alt="Neptune Diving website" loading="lazy"></div>
 <div class="portfolio-meta"><div><h5>Neptune Diving</h5><span>neptunediving.com</span></div><span class="portfolio-arrow">→</span></div>
-</a>
-
-<a class="portfolio-card" href="https://unotomo.com/" target="_blank" rel="noopener">
-<div class="portfolio-thumb"><img src="images/portfolio/unotomo.jpg" alt="Unotomo website" loading="lazy"></div>
-<div class="portfolio-meta"><div><h5>Unotomo</h5><span>unotomo.com</span></div><span class="portfolio-arrow">→</span></div>
 </a>
 
 <a class="portfolio-card" href="https://www.neighbourhoodconnect.org.au/" target="_blank" rel="noopener">
